@@ -1,0 +1,68 @@
+.App {
+  margin-top: 1px;
+}
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 15px;
+}
+.appTitle {
+  height: 60px;
+  background-color: #1769aa;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.appAction {
+  width: 60%;
+  height: 60px;
+  margin: auto;
+}
+.oneTask {
+  background-color: rgb(252, 252, 252);
+  margin: auto;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  transition: transform 0.2s;
+}
+.oneTask:hover {
+  transform: scale(1.01);
+}
+.todoListContenair {
+  width: 60%;
+  background-color: rgb(162, 167, 162);
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+  min-height: 60px;
+}
+.oneTask p {
+  word-break: keep-all;
+  text-align: start;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #585858;
+  padding: 2px;
+}
+.inputsearch {
+  width: 60%;
+}
+.emptyDataMsg {
+  min-height: 60px;
+  color: #b00020;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
