@@ -1,0 +1,100 @@
+.App {
+  margin-top: 1px;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: "Roboto", sans-serif;
+}
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 15px;
+}
+.appTitle {
+  height: 60px;
+  color: #f1ece5;
+  background-color: #444444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.appAction {
+  width: 60%;
+  height: 60px;
+  margin: auto;
+  padding: 2px 4px;
+}
+.oneTask {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px #444444;
+  margin: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.oneTask:hover {
+  background-color: #fafafa;
+  transform: scale(1.01);
+  opacity: 1;
+}
+.todoListContenair {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+  min-height: 60px;
+}
+.oneTask p {
+  text-align: start;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #444444;
+  padding: 2px;
+  font-size: 1rem;
+  word-break: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.inputsearch {
+  width: 60%;
+}
+.inputsearch input::placeholder {
+  color: #444444;
+  opacity: 1;
+}
+.emptyDataMsg {
+  min-height: 60px;
+  color: #b00020;
+  background-color: fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px #444444;
+  margin: auto;
+  margin-top: 10px;
+  padding: 8px 12px;
+}
+.loading {
+  min-height: 60px;
+  font-size: 1rem;
+  color: #0f8f0b;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
