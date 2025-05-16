@@ -82,7 +82,6 @@ REACT_APP_API_URL=http://localhost:5000
 ```bash
 cd backend
 npm install
-npm start
 ```
 
 #### Frontend
@@ -90,7 +89,6 @@ npm start
 ```bash
 cd ../client
 npm install
-npm start
 ```
 
 ---
