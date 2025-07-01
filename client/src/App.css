@@ -1,17 +1,17 @@
+/* Combined Light and Dark Mode Styles */
 .App {
   margin-top: 1px;
   min-height: 100vh;
-  background-color: #f8f9fa;
   font-family: "Roboto", sans-serif;
+  transition: background-color 0.3s ease;
 }
-.searchBar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-right: 15px;
+
+/* Light Mode */
+.App.light {
+  background-color: #f8f9fa;
 }
-.appTitle {
+
+.App.light .appTitle {
   height: 60px;
   color: #f1ece5;
   background-color: #444444;
@@ -21,29 +21,93 @@
   text-align: center;
   margin-bottom: 15px;
 }
+
+.App.light .oneTask {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px #444444;
+  background-color: #fff;
+}
+
+.App.light .oneTask p {
+  color: #444444;
+}
+
+.App.light .inputsearch input::placeholder {
+  color: #444444;
+}
+
+/* Dark Mode */
+.App.dark {
+  background-color: #444444;
+}
+
+.App.dark .appTitle {
+  height: 60px;
+  color: #f1ece5;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.App.dark .appAction {
+  box-shadow: 0 2px 6px #ddd;
+  border-radius: 8px;
+}
+
+.App.dark .oneTask {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px #ddd;
+  background-color: #444444;
+}
+
+.App.dark .oneTask:hover {
+  box-shadow: 0 2px 2px #2196f3;
+}
+
+.App.dark .oneTask p {
+  color: #2196f3;
+}
+
+.App.dark .inputsearch input::placeholder {
+  color: #f1ece5;
+}
+
+/* Common Styles */
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 15px;
+}
+
 .appAction {
   width: 60%;
   height: 60px;
   margin: auto;
   padding: 2px 4px;
 }
+
 .oneTask {
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 6px #444444;
   margin: auto;
   border-radius: 8px;
   margin-top: 10px;
   padding: 8px 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
   justify-content: space-between;
-  background-color: #fff;
 }
+
 .oneTask:hover {
   background-color: #fafafa;
   transform: scale(1.01);
   opacity: 1;
 }
+
 .todoListContenair {
   width: 60%;
   margin: auto;
@@ -53,29 +117,26 @@
   margin-top: 5px;
   min-height: 60px;
 }
+
 .oneTask p {
   text-align: start;
   font-weight: 500;
   font-size: 1rem;
-  color: #444444;
   padding: 2px;
-  font-size: 1rem;
   word-break: break-word;
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .inputsearch {
   width: 60%;
 }
-.inputsearch input::placeholder {
-  color: #444444;
-  opacity: 1;
-}
+
 .emptyDataMsg {
   min-height: 60px;
   color: #b00020;
-  background-color: fff;
+  background-color: #fff;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -87,6 +148,7 @@
   margin-top: 10px;
   padding: 8px 12px;
 }
+
 .loading {
   min-height: 60px;
   font-size: 1rem;
@@ -97,4 +159,16 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+/* Theme Switch */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.theme-switch-label {
+  margin-left: 10px;
+  color: inherit;
 }

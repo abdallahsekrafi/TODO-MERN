@@ -1,6 +1,9 @@
 import "./App.css";
 import { useState } from "react";
 import { Stack } from "@mui/material";
+import { IconButton, Tooltip } from "@mui/material";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 import ListTask from "./components/ListTask/ListTask";
 import AddTodoModal from "./components/modals/AddTodoModal";
 import Select from "@mui/material/Select";
@@ -13,9 +16,9 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [filterByDescr, setFilterByDescr] = useState("");
   const [filterByIsDone, setFilterByIsDone] = useState("");
-
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <div className="App">
+    <div className={`App ${darkMode ? "dark" : "light"}`}>
       <div className="appTitle">
         <h1>Todo App</h1>
       </div>
@@ -53,6 +56,23 @@ function App() {
             <Chip label="Not done" color="warning" size="small" />
           </MenuItem>
         </Select>
+        <Tooltip
+          title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          <IconButton
+            onClick={() => setDarkMode(!darkMode)}
+            color="inherit"
+            sx={{
+              boxShadow: darkMode ? "0 2px 6px #fff" : "0 2px 6px #444444",
+              transition: "box-shadow 0.3s ease, transform 0.2s ease",
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
+            }}
+          >
+            {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
+        </Tooltip>
       </Stack>
 
       <ListTask
